@@ -1,5 +1,7 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { LogoutButton } from "../../inicioSesion/cerrarSesion";
+import "./inicioUsuario.css";
 
 export const Inicio = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -9,12 +11,13 @@ export const Inicio = () => {
   }
   return (
     isAuthenticated && (
-      <div>
+      <div className="inicioUser">
         <img src={user.picture} alt={user.name} />
         <h2>Bienvenido.. {user.name}</h2>
         <p>Email: {user.email}</p>
 
         <p>Fola</p>
+        <LogoutButton />
       </div>
     )
   );

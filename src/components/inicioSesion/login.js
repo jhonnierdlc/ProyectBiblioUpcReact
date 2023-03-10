@@ -9,6 +9,7 @@ export const LoginButton = () => {
     <div className="backgr">
       <div className="inicioAdmin">
         <main role="main" className="container my-auto">
+          <button className="btn-volver btn btn-close"></button>
           <div className="row">
             <div
               id="login"
@@ -69,10 +70,10 @@ export const LoginButton = () => {
     var user = document.getElementById("usuario").value;
     var pass = document.getElementById("password").value;
 
-    if (user === "admin" && pass === "admin123") {
+    if (user === "admin" && pass === "12345") {
       alert("Bienvenido " + user);
 
       //Ruta para el inicio de Secretaria
-    }
+    } else alert("Error al Iniciar Sesión");
   }
 };
