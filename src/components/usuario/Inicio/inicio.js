@@ -1,6 +1,5 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { LogoutButton } from "../../inicioSesion/cerrarSesion";
 import "./inicioUsuario.css";
 
 export const Inicio = () => {
@@ -17,7 +16,6 @@ export const Inicio = () => {
         <p>Email: {user.email}</p>
 
         <p>Fola</p>
-        <LogoutButton />
       </div>
     )
   );
